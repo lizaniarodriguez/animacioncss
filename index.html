@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animacion snoopy</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(https://img.freepik.com/foto-gratis/ola-mar-tormenta_1398-471.jpg?semt=ais_hybrid&w=740&q=80);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            transform-style: preserve-3d;
+        }
+        .snoopy{
+            width: 160px;
+            height: 250px;
+            background-image: url(https://pngimg.com/uploads/snoopy/snoopy_PNG25.png);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 500px;
+            left: 50%;
+            transform: translate(0, 0);
+            animation: snoopy 2s linear 3 forwards, snoopyalbarco 2s linear forwards 8s, snoopyeseva 6s linear forwards 11s;
+        }
+        .salvavida{
+            width: 150px;
+            height: 180px;
+            background-image: url(https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-orange-swimming-pool-float-ring-png-image_10210672.png);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 320px;
+            left: 500px;
+            transform: scale(0);
+            animation: salvavida 4s linear forwards;
+            animation-delay: 6s;
+        }
+        .barco{
+            width: 700px;
+            height: 400px;
+            background-image: url(https://pngimg.com/uploads/boat/boat_PNG18.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 240px;
+            left: 50px;
+            transform: translateY(0);
+            animation: barco 6s linear 1 forwards, barcoseva 6s linear forwards 11s;
+        }
+        @keyframes snoopy{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-100px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+        @keyframes barco{
+            0%{
+                transform: translateX(-600px);
+            }
+            100%{
+                transform: translateX(0);
+                }
+        }  
+        @keyframes salvavida{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: translate(250px, 270px);
+            }
+            100%{
+                transform: translate(0, 0);
+                display: none;
+            }
+        }
+        @keyframes snoopyalbarco{
+            0%{
+                transform: translate(0, 0);
+            }
+            100%{
+                transform: translate(-220px, -250px);
+                width: 150px;
+                height: 180px;
+                background-image: url(https://pngimg.com/uploads/snoopy/snoopy_PNG1.png);
+            }
+        }
+        @keyframes barcoseva{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(1500px);
+            }
+        }
+        @keyframes snoopyeseva{
+            0%{
+                transform: translate(-220px, -250px);
+            }
+            100%{
+                transform: translate(1200px, -250px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="snoopy"></div>
+    <div class="salvavida"></div>
+    <div class="barco"></div>
+</body>
+</html>
